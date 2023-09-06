@@ -2,6 +2,8 @@
 // Anderson, Franceschi
 //Not Mine
 
+package main;
+
 public class Pause
 {
   public static void wait( double seconds )
