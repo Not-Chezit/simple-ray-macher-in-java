@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "test",
+            "request": "launch",
+            "mainClass": "main.test",
+            "projectName": "simple-ray-macher-in-java_697b02b0"
+        },
+        {
+            "type": "java",
             "name": "Imager",
             "request": "launch",
             "mainClass": "main.Imager",
