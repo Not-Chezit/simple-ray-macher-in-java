@@ -29,14 +29,14 @@ public class rayMarcher {
       colorStorge[1] = 1; 
       while(isWorking);
          {
-            if(rayAge > 100){isWorking = false;}
+            if(rayAge >= 100){isWorking = false;}
             stepSize = 1;
 
 
             rx += rxv;
             ry += ryv;
             rz += rzv;
-            rayAge = rayAge + stepSize;
+            rayAge += stepSize;
          }
 
 
