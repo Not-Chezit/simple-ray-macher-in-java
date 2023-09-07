@@ -13,7 +13,9 @@ public class rayMarcher {
       double xyRotation = worldData[3];
       double zRotation = worldData[4];
       double fov = (worldData[5]/2);
-      boolean isWorking = false;
+      boolean isWorking = true;
+      double rayAge = 0;
+      double stepSize = 1;
 
 
       double tempRotation = xyRotation + (screenPixel[0] * fov); //set up xyz velocitys/rotation
@@ -27,15 +29,18 @@ public class rayMarcher {
       colorStorge[1] = 1; 
       while(isWorking);
          {
-            
+            if(rayAge > 100){isWorking = false;}
+            stepSize = 1;
 
 
-
-
+            rx += rxv;
+            ry += ryv;
+            rz += rzv;
+            rayAge = rayAge + stepSize;
          }
 
 
-
+      colorStorge[0] = rx;
       return colorStorge;
    }
 }  
