@@ -4,7 +4,13 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
+        {
+            "type": "java",
+            "name": "Imager",
+            "request": "launch",
+            "mainClass": "main.Imager",
+            "projectName": "simple-ray-macher-in-java_697b02b0"
+        },
         {
             "type": "java",
             "name": "Current File",
