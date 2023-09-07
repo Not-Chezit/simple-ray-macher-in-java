@@ -22,10 +22,11 @@ public class Imager {
         this.image.setRGB(x, y, color.getRGB());
     }
 
-    public static void main(String[] args) {
-       Imager imager = new Imager("image.png");
-       Color color = imager.getPixelColor(10, 20);
-       imager.setPixelColor(10, 20, new Color(255, 0, 0)); // set pixel to red 
+    public static void main(String[] args) throws IOException {
+       Imager imager = new Imager("main\\imgsrc\\minceraft\\bedrock.png");
+       System.out.println("Hello");
+       Color color = imager.getPixelColor(1, 1);
+       imager.setPixelColor(1, 1, new Color(255, 0, 0)); // set pixel to red 
     }
 }
 
