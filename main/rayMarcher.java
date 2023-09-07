@@ -4,7 +4,7 @@ package main;
 
 public class rayMarcher {
 
-   public static int[] getPixel(double[] worldData, double[] screenPixel)
+   public int[] getPixel(double[] worldData, double[] screenPixel)
    {
       double rx = worldData[0]; //import world data and set up vars
       double ry = worldData[1];
@@ -23,7 +23,7 @@ public class rayMarcher {
       
       while(isWorking);
          {
-   
+            
 
 
 
