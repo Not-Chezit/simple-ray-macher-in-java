@@ -1,4 +1,4 @@
-package main.imgsrc.objectTypes;
+package main.objectTypes;
 
 public class simpleShape{
     public static double[] cube(double[] worldData, double[] pos, double size, String texture){
