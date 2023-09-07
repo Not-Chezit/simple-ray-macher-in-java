@@ -21,12 +21,23 @@ public class Imager {
     public void setPixelColor(int x, int y, Color color) {
         this.image.setRGB(x, y, color.getRGB());
     }
+    
+    public void writeImage(String fileName) throws IOException{
+        ImageIO.write(this.image, "png", new File(fileName));
+    }
+
+    public void writeImage(String fileName, String saveName) throws IOException{
+        ImageIO.write(this.image, "png", new File(saveName));
+    }
+
 
     public static void main(String[] args) throws IOException {
-       Imager imager = new Imager("main\\imgsrc\\minceraft\\bedrock.png");
-       System.out.println("Hello");
-       Color color = imager.getPixelColor(1, 1);
-       imager.setPixelColor(1, 1, new Color(255, 0, 0)); // set pixel to red 
+        String fileName = "main\\imgsrc\\minceraft\\bedrock.png";
+        Imager imager = new Imager(fileName);
+        Color color = imager.getPixelColor(0, 0);
+        System.out.println(color);
+        imager.setPixelColor(0, 0, new Color(255, 0, 0)); // set pixel value Obj imager to red 
+        imager.writeImage(fileName, "test-kg.png");
     }
 }
 
