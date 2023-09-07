@@ -1,15 +1,15 @@
 package main;
 
-
+import main.objectTypes.simpleShape;
 
 public class rayMarcher {
 
-   public int[] getPixel(double[] worldData, double[] screenPixel)
+   public double[] getPixel(double[] worldData, double[] screenPixel)
    {
       double rx = worldData[0]; //import world data and set up vars
       double ry = worldData[1];
       double rz = worldData[2];
-      int[] colorStorge = {0,0,0};
+      double[] colorStorge = {0,0,0,0};
       double xyRotation = worldData[3];
       double zRotation = worldData[4];
       double fov = (worldData[5]/2);
@@ -21,6 +21,10 @@ public class rayMarcher {
       double rxv = Math.cos(Math.toRadians(tempRotation));
       double ryv = Math.sin(Math.toRadians(tempRotation));
       
+      simpleShape tempShape = new simpleShape();
+      
+
+      colorStorge[1] = 1; 
       while(isWorking);
          {
             

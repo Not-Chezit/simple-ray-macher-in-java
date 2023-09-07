@@ -9,6 +9,13 @@
             "name": "test",
             "request": "launch",
             "mainClass": "main.test",
+            "projectName": "simple-ray-macher-in-java-1_3cb97542"
+        },
+        {
+            "type": "java",
+            "name": "test",
+            "request": "launch",
+            "mainClass": "main.test",
             "projectName": "simple-ray-macher-in-java_697b02b0"
         },
         {
