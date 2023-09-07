@@ -14,6 +14,7 @@ public class rayMarcher {
       double zRotation = worldData[4];
       double fov = (worldData[5]/2);
       boolean isWorking = true;
+      boolean isSearching = true;
       double rayAge = 0;
       double stepSize = 1;
 
@@ -23,7 +24,7 @@ public class rayMarcher {
       double rxv = Math.cos(Math.toRadians(tempRotation));
       double ryv = Math.sin(Math.toRadians(tempRotation));
       
-      simpleShape tempShape = new simpleShape();//temp stuff
+      //simpleShape tempShape = new simpleShape();//temp stuff
       double tempWorldData[] = worldData;
       double tempPos[] = {20,0,0};
       double tempSize = 10;
@@ -34,14 +35,28 @@ public class rayMarcher {
             
             if(rayAge >= 100){isWorking = false;}
             stepSize = 1;
-            
+            tempWorldData[0] = rx;
+            tempWorldData[1] = ry;
+            tempWorldData[2] = rz;
 
-            colorStorge =  tempShape.cube(tempWorldData, tempPos, tempSize, tempTex);
+            isSearching = true;
+            while(isSearching){
+               stepSize++;
+               colorStorge =  simpleShape.cube(tempWorldData, tempPos, (tempSize+stepSize), tempTex);
+               if(colorStorge[0] == 1.0){isSearching = false;}
+               if(stepSize > 10){isSearching = false;}
 
+
+            }
+            stepSize += -1;
+            if(stepSize < 1){stepSize = 1;}
             rx += rxv;
             ry += ryv;
             rz += rzv;
             rayAge += stepSize;
+            
+            colorStorge =  simpleShape.cube(tempWorldData, tempPos, tempSize, tempTex);
+            if(colorStorge[0] == 1.0){isWorking = false;}
          }
 
 

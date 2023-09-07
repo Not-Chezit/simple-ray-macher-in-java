@@ -1,7 +1,7 @@
 package main;
-import main.rayMarcher;
-import main.Imager;
-import java.awt.Color;
+//import main.rayMarcher;
+//import main.Imager;
+//import java.awt.Color;
 import java.io.IOException;
 
 public class test {
@@ -25,7 +25,7 @@ public class test {
                 screenpos[0] = (i/8)-0.5;
                 screenpos[1] = (j/8)-0.5;
                 output = worker1.getPixel(temp, screenpos);
-                System.out.print(output[0] + " ");
+                System.out.print(output[1] + " ");
 
 
 
