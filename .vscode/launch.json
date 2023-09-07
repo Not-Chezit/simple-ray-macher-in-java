@@ -1,0 +1,36 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Imager",
+            "request": "launch",
+            "mainClass": "main.Imager",
+            "projectName": "simple-ray-macher-in-java_3458bc86"
+        },
+        {
+            "type": "java",
+            "name": "rayMarcher",
+            "request": "launch",
+            "mainClass": "main.rayMarcher",
+            "projectName": "simple-ray-macher-in-java_3458bc86"
+        },
+        {
+            "type": "java",
+            "name": "test",
+            "request": "launch",
+            "mainClass": "main.test",
+            "projectName": "simple-ray-macher-in-java_3458bc86"
+        }
+    ]
+}
