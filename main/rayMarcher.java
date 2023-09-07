@@ -23,15 +23,20 @@ public class rayMarcher {
       double rxv = Math.cos(Math.toRadians(tempRotation));
       double ryv = Math.sin(Math.toRadians(tempRotation));
       
-      simpleShape tempShape = new simpleShape();
-      
+      simpleShape tempShape = new simpleShape();//temp stuff
+      double tempWorldData[] = worldData;
+      double tempPos[] = {20,0,0};
+      double tempSize = 10;
+      String tempTex = "";
 
-      colorStorge[1] = 1; 
-      while(isWorking);
+      while(isWorking)
          {
+            
             if(rayAge >= 100){isWorking = false;}
             stepSize = 1;
+            
 
+            colorStorge =  tempShape.cube(tempWorldData, tempPos, tempSize, tempTex);
 
             rx += rxv;
             ry += ryv;
@@ -40,7 +45,7 @@ public class rayMarcher {
          }
 
 
-      colorStorge[0] = rx;
+      
       return colorStorge;
    }
 }  
